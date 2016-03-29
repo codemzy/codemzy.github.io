@@ -19,14 +19,20 @@ $(document).ready(function(){
   
   // CONTACT
   var name = String.fromCharCode(99, 111, 100, 101, 109, 122, 121);
-  var contactform =  document.getElementById('contact-form');
-  contactform.setAttribute('action', '//formspree.io/' + name + '@' + 'gmail' + '.' + 'com');
   
   // SUBMIT
-  $('#form-send').on('click', function() {
+  $("#form-send").on("click", function() {
+    var message = $("#contact-form").serialize();
+    $.ajax({
+        url: '//formspree.io/' + name + '@' + 'gmail' + '.' + 'com', 
+        method: "POST",
+        data: {message: message},
+        dataType: "json"
+    });
     $('#modal-contact').closeModal();
     Materialize.toast('Thank you for getting in touch!', 5000);
-  });
+    return true;
+});
 
   // SCROLLING ACTIONS
   window.onscroll = function(){
