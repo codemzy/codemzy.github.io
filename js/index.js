@@ -23,10 +23,17 @@ $(document).ready(function(){
   // SUBMIT
   $('#contact-form').submit(function(event) {
     var message = $("#contact-form").serialize();
+    var formData = {
+        'name'              : $('input[name=name]').val(),
+        '_replyto'             : $('input[name=_replyto]').val(),
+        'message'             : $('input[name=message]').val(),
+        '_subject'             : $('input[name=_subject]').val(),
+        '_gotcha'             : $('input[name=_gotcha]').val()
+    };
     $.ajax({
         url: '//formspree.io/' + name + '@' + 'gmail' + '.' + 'com', 
         method: "POST",
-        data: {message: message},
+        data: formData,
         dataType: "json"
     });
     event.preventDefault();
