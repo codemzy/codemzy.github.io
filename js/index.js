@@ -40,7 +40,11 @@ $(document).ready(function(){
     $('#modal-contact').closeModal();
     Materialize.toast('Thank you for getting in touch!', 5000);
     return false;
-});
+  });
+
+  $('#form-cancel').on('click', function(event) {
+    event.preventDefault();
+  });
 
   // SCROLLING ACTIONS
   window.onscroll = function(){
