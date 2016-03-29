@@ -24,6 +24,7 @@ $(document).ready(function(){
   
   // SUBMIT
   $('#form-send').on('click', function() {
+    $('#modal-contact').closeModal();
     Materialize.toast('Thank you for getting in touch!', 5000);
   });
 
