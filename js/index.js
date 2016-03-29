@@ -21,7 +21,7 @@ $(document).ready(function(){
   var name = String.fromCharCode(99, 111, 100, 101, 109, 122, 121);
   
   // SUBMIT
-  $("#form-send").on("click", function() {
+  $('#contact-form').submit(function(event) {
     var message = $("#contact-form").serialize();
     $.ajax({
         url: '//formspree.io/' + name + '@' + 'gmail' + '.' + 'com', 
@@ -29,9 +29,10 @@ $(document).ready(function(){
         data: {message: message},
         dataType: "json"
     });
+    event.preventDefault();
     $('#modal-contact').closeModal();
     Materialize.toast('Thank you for getting in touch!', 5000);
-    return true;
+    return false;
 });
 
   // SCROLLING ACTIONS
