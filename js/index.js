@@ -9,6 +9,18 @@ $(document).ready(function(){
     }
   );
   
+  $('#side-fe').on('click', function() {
+    $('ul.tabs').tabs('select_tab', 'proj-frontend');
+  })
+  
+  $('#side-be').on('click', function() {
+    $('ul.tabs').tabs('select_tab', 'proj-backend');
+  })
+  
+  $('#side-fs').on('click', function() {
+    $('ul.tabs').tabs('select_tab', 'proj-fullstack');
+  })
+  
   // CONTACT MODAL
   $('.modal-trigger').leanModal({
       dismissible: true, // Modal can be dismissed by clicking outside of the modal
