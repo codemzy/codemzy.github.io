@@ -26,7 +26,7 @@ $(document).ready(function(){
     var formData = {
         'name'              : $('input[name=name]').val(),
         '_replyto'             : $('input[name=_replyto]').val(),
-        'message'             : $('input[name=message]').val(),
+        'message'             : $('textarea[name=message]').val(),
         '_subject'             : $('input[name=_subject]').val(),
         '_gotcha'             : $('input[name=_gotcha]').val()
     };
