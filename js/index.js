@@ -60,7 +60,7 @@ $(document).ready(function(){
 
   // SCROLLING ACTIONS
   window.onscroll = function(){
-    var position = $("body").scrollTop();
+    var position = $("body").scrollTop() || $(window).scrollTop();
     // waving
     if (position < 300) {
       waveChange(250);
