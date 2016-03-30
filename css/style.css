@@ -136,6 +136,16 @@ footer.page-footer {
   margin-bottom: 4px;
 }
 
+.btn-floating {
+  position: fixed;
+}
+
+#btn-sidemenu {
+  border-radius: 0px;
+  height: 50px;
+  width: 100px;
+}
+
 .card-contact {
   height: 500px;
 }
