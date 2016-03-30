@@ -63,6 +63,10 @@ footer.page-footer {
   background-position: 325px;
 }
 
+.tabs {
+  overflow-x: hidden;
+}
+
 .tabs .tab a {
     color: #00bcd4;
 }
