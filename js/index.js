@@ -11,15 +11,15 @@ $(document).ready(function(){
   
   $('#side-fe').on('click', function() {
     $('ul.tabs').tabs('select_tab', 'proj-frontend');
-  })
+  });
   
   $('#side-be').on('click', function() {
     $('ul.tabs').tabs('select_tab', 'proj-backend');
-  })
+  });
   
   $('#side-fs').on('click', function() {
     $('ul.tabs').tabs('select_tab', 'proj-fullstack');
-  })
+  });
   
   // CONTACT MODAL
   $('.modal-trigger').leanModal({
@@ -34,7 +34,6 @@ $(document).ready(function(){
   
   // SUBMIT
   $('#contact-form').submit(function(event) {
-    var message = $("#contact-form").serialize();
     var formData = {
         'name'              : $('input[name=name]').val(),
         '_replyto'             : $('input[name=_replyto]').val(),
@@ -141,6 +140,6 @@ $(document).ready(function(){
   // WAVE IMG FUNCTION
   var waveChange = function(num) {
     $('.wave').css("background-position", num+"px");
-  }
+  };
   
 });
