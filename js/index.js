@@ -61,7 +61,13 @@ $(document).ready(function(){
   window.onscroll = function(){
     var position = $("body").scrollTop() || $(window).scrollTop();
     // waving
-    if (position < 300) {
+    if (position > 100 && position < 150) {
+      waveChange(1000);
+    } else if (position > 150 && position < 200) {
+      waveChange(750);
+    } else if (position > 200 && position < 250) {
+      waveChange(500);
+    } else if (position > 250 && position < 300) {
       waveChange(250);
     } else if (position > 300 && position < 350) {
       waveChange(500);
